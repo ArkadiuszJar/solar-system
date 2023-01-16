@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+		<title>Solar System | Have Fun</title>
+	</head>
+	<body>
+		<div class="loading-screen">
+			<h1 class="loading-title">SOLAR SYSTEM</h1>
+			<p class="loading-text">Discover the beauty of our Solar System.</p>
+			<button class="loading-button">Explore</button>
+		</div>
+		<div class="title__container">
+			<h2 class="title">Earth</h2>
+			<p class="subtitle">Click for more info</p>
+		</div>
+		<div class="menu__container">
+			<div class="select__container">
+				<p>Planet:</p>
+				<select name="Planet" id="planet-select">
+					<option value="earth">Earth</option>
+					<option value="mercury">Mercury</option>
+					<option value="venus">Venus</option>
+					<option value="mars">Mars</option>
+					<option value="jupiter">Jupiter</option>
+					<option value="saturn">Saturn</option>
+					<option value="uranus">Uranus</option>
+					<option value="neptune">Neptune</option>
+				</select>
+			</div>
+			<button class="planet__btn">Go to planet</button>
+		</div>
+
+		<div class="planet-info close">
+			<p class="info-title">Earth</p>
+			<div class="info-text">
+				<p class="info-text__p1">
+					Earth is the third planet from the Sun and the only astronomical
+					object known to harbor life.
+				</p>
+				<br />
+				<p class="info-text__p2">
+					About 29.2% of Earth's surface is land consisting of continents and
+					islands.
+				</p>
+				<br />
+				<p class="info-text__p3">
+					The remaining 70.8% is covered with water, mostly by oceans but also
+					lakes, rivers and other fresh water, which together constitute the
+					hydrosphere.
+				</p>
+				<br />
+				<p class="info-text__p4">
+					Earth's gravity interacts with other objects in space, especially the
+					Sun and the Moon, Earth's only natural satellite. Earth orbits around
+					the Sun in 365.256 days, a period known as an Earth year. During this
+					time, Earth rotates about its axis about 366.256 times.
+				</p>
+			</div>
+		</div>
+		<div class="planet-info-nerds close">
+			<div class="planet-info__wrapper">
+				<p class="planet-info-title">Radius :</p>
+				<p class="planet-info-radius">6371 km</p>
+			</div>
+			<div class="planet-info__wrapper">
+				<p class="planet-info-title">Surface area :</p>
+				<p class="planet-info-surface">510,072,000 km²</p>
+			</div>
+			<div class="planet-info__wrapper">
+				<p class="planet-info-title">Surface gravity :</p>
+				<p class="planet-info-gravity">9.8 m/s²</p>
+			</div>
+			<div class="planet-info__wrapper">
+				<p class="planet-info-title">Average temperature :</p>
+				<p class="planet-info-temperature">14°C</p>
+			</div>
+			<div class="planet-info__wrapper">
+				<p class="planet-info-title">Natural satellites:</p>
+				<p class="planet-info-satellites">1</p>
+			</div>
+		</div>
+
+		<script src="../dist/bundle.js"></script>
+	</body>
+</html>
