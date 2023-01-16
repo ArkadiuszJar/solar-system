@@ -5,7 +5,7 @@
 	"main": "webpack.config.js",
 	"scripts": {
 		"dev": "webpack watch --mode=development --config webpack.config.js",
-		"prod": "webpack --mode-production --config webpack.config.js"
+		"prod": "webpack --mode=production --config webpack.config.js"
 	},
 	"keywords": [],
 	"author": "",
