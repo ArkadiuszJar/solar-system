@@ -60,11 +60,11 @@ loadingButton.addEventListener("click", () => {
 	});
 });
 
-//Loaded models
+//Loaded. models
 
 //earth
 
-loader.load("/models/earth.glb", (glb) => {
+loader.load("./models/earth.glb", (glb) => {
 	earth = glb.scene;
 	earth.scale.set(0.001, 0.001, 0.001);
 	earth.rotation.set(0, 0, 0);
@@ -73,7 +73,7 @@ loader.load("/models/earth.glb", (glb) => {
 
 //moon
 
-loader.load("/models/moon.glb", (glb) => {
+loader.load("./models/moon.glb", (glb) => {
 	moon = glb.scene;
 	moon.scale.set(0.1, 0.1, 0.1);
 	moon.rotation.set(0, 2, 0.4);
@@ -83,7 +83,7 @@ loader.load("/models/moon.glb", (glb) => {
 
 //sun
 
-loader.load("/models/sun.glb", (glb) => {
+loader.load("./models/sun.glb", (glb) => {
 	sun = glb.scene;
 	sun.scale.set(0.05, 0.05, 0.05);
 	sun.position.set(2000, 0, 0);
@@ -92,7 +92,7 @@ loader.load("/models/sun.glb", (glb) => {
 
 //mercury
 
-loader.load("/models/mercury.glb", (glb) => {
+loader.load("./models/mercury.glb", (glb) => {
 	mercury = glb.scene;
 	mercury.scale.set(0.001, 0.001, 0.001);
 	mercury.position.set(1300, 0, 0);
@@ -101,7 +101,7 @@ loader.load("/models/mercury.glb", (glb) => {
 
 //venus
 
-loader.load("/models/venus.glb", (glb) => {
+loader.load("./models/venus.glb", (glb) => {
 	venus = glb.scene;
 	venus.scale.set(0.001, 0.001, 0.001);
 	venus.position.set(1000, 0, -100);
@@ -110,7 +110,7 @@ loader.load("/models/venus.glb", (glb) => {
 
 //mars
 
-loader.load("/models/mars.glb", (glb) => {
+loader.load("./models/mars.glb", (glb) => {
 	mars = glb.scene;
 	mars.scale.set(0.001, 0.001, 0.001);
 	mars.position.set(-300, 0, 0);
@@ -119,7 +119,7 @@ loader.load("/models/mars.glb", (glb) => {
 
 //jupiter
 
-loader.load("/models/jupiter.glb", (glb) => {
+loader.load("./models/jupiter.glb", (glb) => {
 	jupiter = glb.scene;
 	jupiter.scale.set(0.001, 0.001, 0.001);
 	jupiter.rotation.set(0, 2.5, 0);
@@ -129,7 +129,7 @@ loader.load("/models/jupiter.glb", (glb) => {
 
 //saturn
 
-loader.load("/models/saturn.glb", (glb) => {
+loader.load("./models/saturn.glb", (glb) => {
 	saturn = glb.scene;
 	saturn.scale.set(0.001, 0.001, 0.001);
 	saturn.rotation.set(0, -0.2, -0.2);
@@ -139,7 +139,7 @@ loader.load("/models/saturn.glb", (glb) => {
 
 //uranus
 
-loader.load("/models/uranus.glb", (glb) => {
+loader.load("./models/uranus.glb", (glb) => {
 	uranus = glb.scene;
 	uranus.scale.set(0.001, 0.001, 0.001);
 	uranus.rotation.set(0, 2, 0);
@@ -149,7 +149,7 @@ loader.load("/models/uranus.glb", (glb) => {
 
 //neptune
 
-loader.load("/models/neptune.glb", (glb) => {
+loader.load("./models/neptune.glb", (glb) => {
 	neptune = glb.scene;
 	neptune.scale.set(0.001, 0.001, 0.001);
 	neptune.rotation.set(0, 2, 0);
@@ -160,7 +160,7 @@ loader.load("/models/neptune.glb", (glb) => {
 // Skybox (background)
 const skyboxMesh = new THREE.BoxGeometry(14000, 14000, 14000);
 const skyboxMaterial = new THREE.MeshBasicMaterial({
-	map: textureLoader.load("/images/spacebg1.jpg"),
+	map: textureLoader.load("./images/spacebg1.jpg"),
 	side: THREE.BackSide,
 });
 
