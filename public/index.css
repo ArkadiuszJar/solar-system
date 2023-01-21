@@ -37,6 +37,19 @@
 	text-align: center;
 }
 
+.loading-icon {
+	animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 .loading-button {
 	background-color: transparent;
 	padding: 0.5rem 1.5rem;
@@ -46,6 +59,7 @@
 	border: 2px solid white;
 	transition: border 0.2s ease-in-out;
 	cursor: pointer;
+	display: none;
 }
 
 .loading-button:hover {
@@ -226,14 +240,7 @@ option {
 		width: 100%;
 		backdrop-filter: blur(5px);
 	}
-
-	.menu__container {
-		
-	}
 }
 
 @media only screen and (max-width: 800px) {
-	.menu__container{
-		
-	}
 }

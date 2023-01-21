@@ -38,28 +38,46 @@ controls.enablePan = false;
 
 //Loaders
 
-const loader = new GLTFLoader();
+const loadingMenager = new THREE.LoadingManager();
+
+loadingMenager.onStart = (itemsLoaded, itemsTotal) => {
+	console.log("loading started");
+};
+
+loadingMenager.onLoad = () => {
+	const loadingScreen = document.querySelector(".loading-screen");
+	const loadingButton = document.querySelector(".loading-button");
+	const loadingIcon = document.querySelector(".loading-icon");
+
+	loadingIcon.style.display = "none";
+	gsap.to(loadingButton, { opacity: 1, duration: 0.5, display: "block" });
+
+	loadingButton.addEventListener("click", () => {
+		gsap.fromTo(
+			loadingScreen,
+			{ opacity: 1 },
+			{ opacity: 0, duration: 0.5, display: "none" }
+		);
+
+		gsap.to(camera.position, {
+			x: 3,
+			y: 0,
+			z: 5,
+			duration: 1,
+		});
+	});
+};
+
+loadingMenager.onProgress = () => {};
+
+loadingMenager.onError = () => {
+	console.log("loading error");
+};
+
+const loader = new GLTFLoader(loadingMenager);
 const textureLoader = new THREE.TextureLoader();
 
 //Loading screen
-
-const loadingScreen = document.querySelector(".loading-screen");
-const loadingButton = document.querySelector(".loading-button");
-
-loadingButton.addEventListener("click", () => {
-	gsap.fromTo(
-		loadingScreen,
-		{ opacity: 1 },
-		{ opacity: 0, duration: 0.5, display: "none" }
-	);
-
-	gsap.to(camera.position, {
-		x: 3,
-		y: 0,
-		z: 5,
-		duration: 1,
-	});
-});
 
 //Loaded. models
 
