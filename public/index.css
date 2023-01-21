@@ -28,11 +28,13 @@
 .loading-screen h1 {
 	font-size: 2.5rem;
 	letter-spacing: 5px;
+	text-align: center;
 }
 
 .loading-text {
 	letter-spacing: 5px;
 	padding: 2rem;
+	text-align: center;
 }
 
 .loading-button {
@@ -223,5 +225,15 @@ option {
 	.planet-info {
 		width: 100%;
 		backdrop-filter: blur(5px);
+	}
+
+	.menu__container {
+		
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.menu__container{
+		
 	}
 }
