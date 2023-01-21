@@ -48,8 +48,11 @@ loadingMenager.onLoad = () => {
 	const loadingScreen = document.querySelector(".loading-screen");
 	const loadingButton = document.querySelector(".loading-button");
 	const loadingIcon = document.querySelector(".loading-icon");
+	const progressValue = document.querySelector(".loading-value");
 
 	loadingIcon.style.display = "none";
+	progressValue.style.display = "none";
+
 	gsap.to(loadingButton, { opacity: 1, duration: 0.5, display: "block" });
 
 	loadingButton.addEventListener("click", () => {
@@ -68,7 +71,11 @@ loadingMenager.onLoad = () => {
 	});
 };
 
-loadingMenager.onProgress = () => {};
+loadingMenager.onProgress = (url, loaded, total) => {
+	const progressValue = document.querySelector(".loading-value");
+	const progress = (loaded / total) * 100;
+	progressValue.innerHTML = `${Math.round(progress)}%`;
+};
 
 loadingMenager.onError = () => {
 	console.log("loading error");
